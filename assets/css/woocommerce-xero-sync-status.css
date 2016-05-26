@@ -1,0 +1,82 @@
+/* Style the Xero status items like the Woo status column. */
+.column-xero_status {
+	width: 68px;
+	text-align: center;
+}
+
+.manage-column.column-xero_status {
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	background: url(../images/xero-logo.svg);
+	background-size: 25px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.column-xero_status mark {
+	display:inline-block;
+	text-indent:-9999px;
+	position:relative;
+	height:1em;
+	width:1em;
+	background:0 0;
+	font-size:1.4em;
+	margin:0 auto;
+	padding: 2px;
+}
+
+.column-xero_status mark.skipped_zero:after,
+.column-xero_status mark.skipped_status:after,
+.column-xero_status mark.synced_invoice:after,
+.column-xero_status mark.synced_payment:after,
+.column-xero_status mark.synced_refund:after,
+.column-xero_status mark.sync_error:after {
+	font-family:WooCommerce;
+	speak:none;
+	font-weight:400;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1;
+	-webkit-font-smoothing:antialiased;
+	margin:0;
+	text-indent:0;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	text-align:center
+}
+
+.column-xero_status mark.skipped_zero:after {
+	content:"\e602";
+	color:#ccc;
+}
+
+.column-xero_status mark.skipped_status:after {
+	content:"\e602";
+	color:#ccc;
+}
+
+.column-xero_status mark.synced_invoice:after {
+	content:"\e01d";
+	color:#2ea2cc;
+}
+
+.column-xero_status mark.synced_payment:after {
+	content:"\e01e";
+	color:#2ea2cc;
+}
+
+/* Not implemented yet */
+.column-xero_status mark.synced_refund:after {
+	content:"\e014";
+	color:#2ea2cc;
+}
+
+/* Not implemented yet */
+.column-xero_status mark.sync_error:after {
+	content:"\e016";
+	color:#aa0000;
+}
